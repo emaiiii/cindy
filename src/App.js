@@ -1,33 +1,26 @@
 import React, {Component} from 'react';
-import Particles from 'react-particles-js';
 import Clarifai from 'clarifai';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Navigation from './components/Navigation/Navigation';
 import Signin from './components/Signin/Signin';
-import Register from './components/Register/Register';
 import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import './App.css';
 
+import letter from './images/letter.jpg';
+import image1 from './images/image1.jpg';
+import image2 from './images/image2.jpg';
+import image3 from './images/image3.jpg';
+import image4 from './images/image4.jpg';
+import image5 from './images/image5.jpg';
+import image7 from './images/image7.jpg';
+
+
 // api key
 const app = new Clarifai.App({
  apiKey: 'a0a70926e040489eafbb16b5509c97a8'
 });
-
-
-const particlesOptions = {
-  particles: {
-    number: {
-      value: 100,
-      density: {
-        enable: true,
-        value_area: 800
-      }
-    }
-  }
-}
-
 
 class App extends Component {
   constructor() {
@@ -118,22 +111,29 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Particles className='particles' params={particlesOptions}/>
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/>
         { route === 'home' 
           ? <div>
               <Logo/>
-              <Rank name={this.state.user.name} entries={this.state.user.entries}/>
-              <ImageLinkForm 
-                onInputChange={this.onInputChange}
-                onButtonSubmit={this.onButtonSubmit}
-              />
-              <FaceRecognition box={box} imageUrl={imageUrl}/>
+              <div class="container">
+                <img src={image1} alt="image1"/>
+                <img src={image2} alt="image2"/>
+                <img src={image3} alt="image3"/>
+                <img src={image4} alt="image4"/>
+                <img src={image5} alt="image5"/>
+                <img src={image7} alt="image7"/>
+             </div>
+             <h1>You are the love of my life</h1>
             </div>
           : (
               route === 'signin'
-              ? <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
-              : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
+              ? <div>
+                  <Signin className="right"loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
+                  <div className="tilt br3 ba dark-gray b--black-10 mv6 w-100 w-50-m w-50-l mw7 shadow-5 left">
+                    <img src={letter} alt="letter"/>
+                  </div>
+                </div>
+              : <h1>You not my girlfriend</h1>
             )
         }
       </div>

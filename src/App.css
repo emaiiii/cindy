@@ -7,11 +7,34 @@
   justify-content: center;
 }
 
-.particles{
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
+.right {
+  position: absolute;
+  right: 50px;
+}
+
+.left {
+  position: absolute;
+  left: 300px;
+}
+
+.tilt {
+	transform: rotate(10deg);
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container img {
+  width: 450px;
+  height: 600px;
+  margin: 10px;
+  border-color: brown;
+  transition: all 1s;
+}
+
+img:hover {
+  transform: scale(1.1);
 }
