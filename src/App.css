@@ -47,3 +47,9 @@ img:hover {
     border-radius: 10px;
     padding: 5px;
 }
+
+.borderimg {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(images/border.png) 30 round;
+}

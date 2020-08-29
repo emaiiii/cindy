@@ -44,24 +44,24 @@ class App extends Component {
         { route === 'home' 
           ? <div>
               <Logo/>
-              <h1>Happy Anniversary to the Most Special Person</h1>
+              <h1>❤️ Happy Anniversary to the Most Special Person ❤️</h1>
               <div class="container">
-                <img src={image1} alt="image1"/>
-                <img src={image2} alt="image2"/>
-                <img src={image3} alt="image3"/>
-                <img src={image4} alt="image4"/>
-                <img src={image5} alt="image5"/>
-                <img src={image7} alt="image7"/>
+                <img className="borderimg" src={image1} alt="image1"/>
+                <img className="borderimg" src={image2} alt="image2"/>
+                <img className="borderimg" src={image3} alt="image3"/>
+                <img className="borderimg" src={image4} alt="image4"/>
+                <img className="borderimg" src={image5} alt="image5"/>
+                <img className="borderimg" src={image7} alt="image7"/>
              </div>
              <h1 text-col>❤️ You are the True Love of My Life ❤️</h1>
              <h1 align="left">Picture 1: This was one of the most important days of my life. This is because on this day, I asked you to be my girlfriend. 
-             It was one small moment that led to so much happiness for me.</h1>
+             It was one small moment that changed my life—one small moment that has led to many years of happiness.</h1>
              <h1 align="left">Picture 2: On this day, I was so happy, but I was also so scared. I was happy, because we had graduated together, and you 
              were still in my life. I was scared, because we would be going off to college, not knowing what could happen.</h1>
              <h1 align="left">Picture 3: This is my favorite picture from our first trip to San Francisco together. On this trip, I remember thinking about
              how much I love you. One reason I love you so much is because, you bring more joy to my life than I can ask for.</h1>
              <h1 align="left">Picture 4: This picture is of us on our second trip to San Francisco together. It was even more fun than the first, because
-             it was just with you. You and only you alone can make me feel happiness that people spend their lives searching for.</h1>
+             it was just with you. You and only you alone can make me feel a level of happiness that people spend their lives searching for.</h1>
              <h1 align="left">Picture 5: I just liked this picture of us, so I added it.LOL. I also look pretty good don't you think? Not too fat for once.</h1>
              <h1 align="left">Picture 6: As we move on to our next chapter in life, I know that you are thinking, or have thought, about what will become 
              of us. I have faith in us, and I believe we have been through so much to let anything ever destroy us. There is no possibility of me 
